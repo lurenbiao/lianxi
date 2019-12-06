@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <button id='yes'>确定</button>
+    <p></p>
+</body>
+<script>
+    let text=document.querySelector('#text');
+    let yes=document.querySelector('#yes');
+    let p=document.querySelector('p');
+    let cishu=-1;
+    let lishi=[];
+    yes.onclick=function(){
+        let a=Math.random()*101;
+        let b=parseInt(a);
+        lishi.push(b);
+        cishu++;
+        if(lishi[cishu]<cishu)
+        
+        p.textContent=lishi;
+        // console.log(b);
+        
+    }
+</script>
+</html>

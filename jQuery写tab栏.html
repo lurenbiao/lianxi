@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .btn{
+            float: left;
+        }
+        .btn li{
+            width: 50px;
+            height: 45px;
+            background: skyblue;
+            border-bottom: 1px solid black;
+        }
+        .conter{
+            position: relative;
+            float: left;
+        }
+        .conter li{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 500px;
+            height: 300px;
+            transition: all 1.5s;
+        }
+        .conter li img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="btn">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="conter">
+        <li><a href="$"><img src="./images/28.jpg" alt=""></a></li>
+        <li><a href="$"><img src="./images/29.jpeg" alt=""></a></li>
+        <li><a href="$"><img src="./images/32.png" alt=""></a></li>
+        <li><a href="$"><img src="./images/33.jpg" alt=""></a></li>
+        <li><a href="$"><img src="./images/34.jpg" alt=""></a></li>
+        <li><a href="$"><img src="./images/40.jpeg" alt=""></a></li>
+    </ul>
+</body>
+<script>
+    
+    $('.btn li').mouseover(function(){
+        let a=$(this).index();
+        // $('.conter li').eq(a).siblings('li').hide();
+        // $('.conter li').eq(a).show();
+        $('.conter li').eq(a).show().siblings().hide();
+    })
+</script>
+</html>
